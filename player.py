@@ -39,7 +39,7 @@ class Player(CircleShape):
     
     def shoot(self):
         shot = Shot(self.position.x, self.position.y, self.rotation)
-        return shot
+        return None
     
     def update(self, dt):
         keys = pygame.key.get_pressed()
