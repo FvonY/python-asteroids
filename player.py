@@ -9,6 +9,7 @@ class Player(CircleShape):
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
         self.shots = []
+        self.shot_lock = False
         
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
@@ -49,7 +50,10 @@ class Player(CircleShape):
             self.rotate(-dt)
         if keys[pygame.K_d]:
             self.rotate(dt)
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_SPACE] and not self.shot_lock:
             self.shots = self.shoot()
+            self.shot_lock = True
+        if not keys[pygame.K_SPACE]:
+            self.shot_lock = False
         pass
     
