@@ -17,7 +17,7 @@ class Shot(CircleShape):
         self.position += forward * SHOT_SPEED * dt
         
     def check_lifetime(self):
-        if self.lifetime > 0.5:
+        if self.lifetime > 2.5:
             self.kill()
         
     def update(self, dt):

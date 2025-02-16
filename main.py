@@ -23,7 +23,7 @@ def main():
     
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    asteroid = Asteroid(100, 100, ASTEROID_MAX_RADIUS)
+    #asteroid = Asteroid(100, 100, ASTEROID_MAX_RADIUS)
     asteroidspawner = AsteroidSpawner()
     shot = Shot(500, SCREEN_HEIGHT / 2, 0)
 
