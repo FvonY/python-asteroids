@@ -49,9 +49,6 @@ class AsteroidSpawner(pygame.sprite.Sprite):
         random_edge = random.randint(0, len(self.edges)-1)
         edge = self.edges_rotation[random_edge]
         
-        print(random_edge)
-        print(edge)
-        
         x_min, x_max = edge["x-range"]
         y_min, y_max = edge["y-range"]
         rotation_offset = edge["rotation-offset"]
